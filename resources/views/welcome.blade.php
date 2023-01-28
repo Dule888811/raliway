@@ -40,9 +40,9 @@
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
                             <div class="flex items-center">
-                                <form autocomplete="off" action="/action_page.php">
+                                <form autocomplete="off" action="/line">
                                     <div class="autocomplete" style="width:300px;">
-                                        <input id="from" type="text" name="myCountry" placeholder="From">
+                                        <input id="from" type="text" name="from" placeholder="From">
                                     </div>
                             </div>
 
@@ -55,7 +55,7 @@
                             <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                                 <div class="flex items-center">
                                         <div class="autocomplete" style="width:300px;">
-                                            <input id="to" type="text" name="myCountry" placeholder="To">
+                                            <input id="to" type="text" name="to" placeholder="To">
                                         </div>
                                         <input type="submit" class="btn btn dark">
                                     </form>

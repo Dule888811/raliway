@@ -18,8 +18,8 @@ class CreateRaliwayLinesTable extends Migration
             $table->string('train');
             $table->time('time');
             $table->unsignedSmallInteger('distance');
-            $table->unsignedBigInteger('city_id');
-            $table->foreign('city_id')->references('id')->on('cities');
+            $table->string('city_name');
+            $table->foreign('city_name')->references('name')->on('cities');
             $table->timestamps();
         });
     }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\RaliwayLineController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,7 @@ Route::get(
     '/cities',
     [CityController::class, 'getCities']
 )->name('cities');
+Route::get(
+    '/line',
+    [RaliwayLineController::class, 'getLines']
+)->name('line');
