@@ -80,8 +80,17 @@
                                 </div>
 
                                 <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                                    <div class="flex items-center">
-
+                                    <div>
+                                        @if(isset($lines))
+                                            @forelse($lines as $line)
+                                              @if(!$line->isEmpty())
+                                                  <div>train:{{$line[0]->train}}</div>
+                                                    <div>end time:{{$line[0]->time}}</div>
+                                              @endif
+                                            @empty
+                                                <h3>No lines</h3>
+                                            @endforelse
+                                        @endif
                                     </div>
 
                                     <div class="ml-12">
@@ -95,10 +104,6 @@
                         <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
                             <div class="text-center text-sm text-gray-500 sm:text-left">
                                 <div class="flex items-center">
-
-
-
-
 
                                 </div>
                             </div>
