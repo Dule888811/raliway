@@ -23,9 +23,6 @@ class RaliwayLineRepository implements RaliwayLineRepositoryInterface
         foreach ($raliwaylines($request) as $line) {
             $lines[] = DB::table('raliway_lines')->where('train', $line->train)->where('city_name', $request->to)->get();
         }
-        function myFilter($var){
-            return (!$var->isEmpty());
-        }
         $lines = array_filter($lines,function($var){
             return (!$var->isEmpty());
         });
